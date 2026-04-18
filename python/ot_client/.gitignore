@@ -1,4 +1,4 @@
-data/response/*
+data/
 env/
 config/
 __pycache__/
