@@ -1,80 +1,106 @@
 # fakeleaf.nvim
 
-## 📌 Project Goal
+## 📌 Overview
 
-`fakeleaf.nvim` is an experimental Neovim plugin that aims to integrate Overleaf projects directly inside Neovim. The long-term goal is to allow users to edit LaTeX documents locally while synchronizing with Overleaf in a seamless and potentially real-time way.
+`fakeleaf.nvim` is an experimental Neovim plugin that aims to bring Overleaf projects directly into Neovim.
 
-This includes:
+The goal is to allow users to:
 
-* Opening Overleaf projects in Neovim
-* Editing files locally
-* Synchronizing changes between Neovim and Overleaf
-* Exploring real-time collaboration using Operational Transform (OT)
+* Open and edit Overleaf LaTeX projects locally
+* Synchronize changes between Neovim and Overleaf
+* Eventually support real-time collaboration using Operational Transform (OT)
+
+This plugin acts as the **frontend layer**, handling buffers, UI, and user interaction inside Neovim.
 
 ---
 
-## 🚧 Current State
+## 🧠 Architecture
 
-⚠️ **This project is in a very early and experimental stage.**
+```
+Neovim (fakeleaf.nvim)
+        ↓
+Python backend (fakeleaf-bridge)
+        ↓
+Overleaf WebSocket (OT)
+```
 
-At the moment:
+* Lua handles editor integration
+* Python handles networking and synchronization
 
-* The codebase is primarily for **local testing and development**
-* Many parts are incomplete or unstable
-* Synchronization logic is still being explored
-* The architecture may change significantly
+---
+
+## 🚧 Current Status
+
+⚠️ **Early-stage experimental project**
+
+* Not stable
+* APIs and structure may change
+* Many features are incomplete or under development
 
 ---
 
 ## 🧪 Local Development Disclaimer
 
-The current implementation contains:
+This repository currently contains:
 
 * Hardcoded paths
-* Machine-specific directories
-* Temporary debugging logic
-* Experimental scripts (especially on the Python side)
+* Machine-specific configurations
+* Debug and test code
 
-👉 These are **specific to my personal development environment** and are **not intended for general use yet**.
+👉 These are **specific to my local environment** and are **not ready for general use**.
 
-If you clone this repository, you will likely need to:
-
-* Adjust file paths
-* Modify configuration
-* Set up your own environment manually
+You will likely need to adapt paths and configuration manually.
 
 ---
 
-## ⚖️ Disclaimer Regarding Overleaf
+## ⚖️ Disclaimer
 
-This project is a personal experiment intended for learning and research purposes.
-
-* It is **not affiliated with Overleaf**
+* This project is **not affiliated with Overleaf**
+* It is intended for **educational and experimental purposes only**
 * It does **not aim to interfere with or abuse Overleaf services**
-* No guarantees are made regarding compatibility or compliance
 
-I explicitly do **not intend to cause any issues** with Overleaf or its staff.
+If the Overleaf team has any concerns, they are welcome to **contact me personally**, and I will address them promptly.
 
-If the Overleaf team has any concerns regarding this project, they are welcome to **contact me personally** and I will address the situation promptly.
+---
+
+## 📦 Installation
+
+Using lazy.nvim:
+
+```lua
+{
+  "julienracette/fakeleaf.nvim",
+}
+```
+
+⚠️ The plugin depends on the Python backend (`fakeleaf-bridge`).
+
+---
+
+## 🔗 Related Project
+
+Backend:
+
+* https://github.com/julienracette/fakeleaf-bridge
 
 ---
 
 ## 🔮 Future Plans
 
-* Clean and configurable plugin structure
-* Proper installation process
+* Clean configuration system
 * Removal of hardcoded paths
-* Stable synchronization mechanism
-* Safer and more robust communication layer
+* Stable synchronization layer
+* Real-time collaboration support
+* Improved installation process
 
 ---
 
 ## 🤝 Contributions
 
-At this stage, contributions are welcome but the project is still evolving rapidly. Expect breaking changes.
+Contributions are welcome, but expect rapid changes and breaking updates.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+MIT License
