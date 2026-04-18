@@ -1,8 +1,8 @@
-# overleaf.nvim
+# fakeleaf.nvim
 
 ## 📌 Project Goal
 
-`overleaf.nvim` is an experimental Neovim plugin that aims to integrate Overleaf projects directly inside Neovim. The long-term goal is to allow users to edit LaTeX documents locally while synchronizing with Overleaf in a seamless and potentially real-time way.
+`fakeleaf.nvim` is an experimental Neovim plugin that aims to integrate Overleaf projects directly inside Neovim. The long-term goal is to allow users to edit LaTeX documents locally while synchronizing with Overleaf in a seamless and potentially real-time way.
 
 This includes:
 
@@ -54,7 +54,8 @@ This project is a personal experiment intended for learning and research purpose
 * No guarantees are made regarding compatibility or compliance
 
 I explicitly do **not intend to cause any issues** with Overleaf or its staff.
-This repository is shared for educational and exploratory purposes only.
+
+If the Overleaf team has any concerns regarding this project, they are welcome to **contact me personally** and I will address the situation promptly.
 
 ---
 
@@ -76,4 +77,4 @@ At this stage, contributions are welcome but the project is still evolving rapid
 
 ## 📄 License
 
-TBD
+This project is licensed under the **MIT License**.
